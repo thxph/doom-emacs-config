@@ -2,9 +2,19 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(setq frame-title-format
+      '("%b"
+        (:eval
+         (let ((project-name (projectile-project-name)))
+           (unless (string= "-" project-name)
+             (format " in [%s]" project-name))))
+        " – %p"))
+
 (setq doom-font (font-spec :family "Fira Code" :size 15))
 (setq display-line-numbers-type t)
 (setq-default line-spacing .37)
+
+(add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
 (setq doom-theme 'doom-material)
 (doom-themes-visual-bell-config)
@@ -39,7 +49,7 @@
 (pretty-magit "Fix"      ? (:foreground "#FB6542" :height 1.2))
 (pretty-magit "Refactor" ? (:foreground "#FFBB00" :height 1.2))
 (pretty-magit "Docs"     ? (:foreground "#3F681C" :height 1.2))
-(pretty-magit "master"   ? (:height 1.2) t)
+;(pretty-magit "master"   ? (:height 1.2) t)
 
 
 (defun add-magit-faces ()

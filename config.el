@@ -4,6 +4,7 @@
       user-mail-address "thanh.x.ph@gmail.com")
 
 (load! "thxph-visual")
-(load! "thxph-fira")
+;(load! "thxph-fira")
 (load! "thxph-org")
 (load! "thxph-keymaps")
+(load! "thxph-hydras")
