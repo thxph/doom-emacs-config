@@ -16,11 +16,13 @@
 
 (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
-(setq doom-theme 'doom-material)
+(setq doom-theme 'doom-one)
 (doom-themes-visual-bell-config)
 (setq doom-themes-treemacs-theme "doom-colors")
 (doom-themes-treemacs-config)
 (doom-themes-org-config)
+
+(add-hook 'doom-load-theme-hook (lambda () (set-face-foreground 'org-ellipsis "#ee7570")))
 
 (setq doom-modeline-major-mode-icon t)
 (setq doom-modeline-major-mode-color-icon t)

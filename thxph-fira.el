@@ -2,6 +2,8 @@
 
 (defvar +pretty-code-fira-code-font-name "Fira Code Symbol"
   "Name of the fira code ligature font.")
+(defvar +pretty-code-material-font-name "Material Icons"
+  "Name of the fira code ligature font.")
 
 (defvar +pretty-code-fira-code-font-ligatures
   '(("www"    . #Xe100)
@@ -94,7 +96,7 @@
     ("<="     . #Xe157)
     ("<=="    . #Xe158)
     ("<=>"    . #Xe159)
-    ("<=<"    . #Xe15a)
+;    ("<=<"    . #Xe15a)
     ("<>"     . #Xe15b)
     ("<<"     . #Xe15c)
     ("<<-"    . #Xe15d)
@@ -118,6 +120,7 @@
     ("*"      . #Xe16f)))
 
 (defun +pretty-code-setup-fira-ligatures-h ()
+  (set-fontset-font t '(#Xe15a . #Xe15a) +pretty-code-material-font-name)
   (setq-default prettify-symbols-alist
                 (append prettify-symbols-alist
                         (mapcar #'+pretty-code--correct-symbol-bounds
