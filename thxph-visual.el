@@ -22,8 +22,6 @@
 (doom-themes-treemacs-config)
 (doom-themes-org-config)
 
-(add-hook 'doom-load-theme-hook (lambda () (set-face-foreground 'org-ellipsis "#ee7570")))
-
 (setq doom-modeline-major-mode-icon t)
 (setq doom-modeline-major-mode-color-icon t)
 (setq doom-modeline-indent-info t)

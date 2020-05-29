@@ -6,9 +6,14 @@
 (load! "thxph-visual")
 (load! "thxph-fira")
 (load! "thxph-org")
+(load! "thxph-magit")
 (load! "thxph-keymaps")
 (load! "thxph-hydras")
 ;(load! "font-lock+")
+
+(after! magit
+  (setq magit-log-section-commit-count 20)
+  )
 
 (add-to-list '+format-on-save-enabled-modes 'go-mode t)
 (add-hook! 'go-mode-hook
