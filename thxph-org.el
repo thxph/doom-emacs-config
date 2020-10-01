@@ -2,10 +2,17 @@
 
 (setq org-directory "~/org/")
 ;(use-package! org-attach)
-;(use-package! org-download)
+                                        ;(use-package! org-download)
 (after! org
+  (custom-set-faces
+   '(org-level-1 ((t (:inherit outline-1 :height 2.0))))
+   '(org-level-2 ((t (:inherit outline-2 :height 1.5))))
+   '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
+   '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+   )
   ;(add-hook 'doom-load-theme-hook (lambda () (set-face-foreground 'org-ellipsis "#ee7570")))
-  "✿" "❀" "✸" "●" "◉" "○" ; ♥ ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢  ◆ ◖ ▶
+  ;"✿" "❀" "✸" "●" "◉" "○" ; ♥ ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢  ◆ ◖ ▶
   (setq org-superstar-headline-bullets-list '("✿" "❀" "✸" "●" "◉" "○")
         org-ellipsis "⤵"
         org-lowest-priority 69
@@ -41,3 +48,6 @@
         )
   (set-face-foreground 'org-ellipsis "#ee7570")
   )
+
+(with-eval-after-load 'ox
+  (require 'ox-hugo))

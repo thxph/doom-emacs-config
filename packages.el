@@ -3,6 +3,9 @@
 
 (package! nyan-mode)
 (package! column-marker)
+(package! ox-hugo
+  :recipe (:host github :repo "thxph/ox-hugo")
+  )
 
 ;; This is where you install packages, by declaring them with the `package!'
 ;; macro, then running 'doom refresh' on the command line. You'll need to

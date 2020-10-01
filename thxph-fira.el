@@ -119,11 +119,11 @@
     ("+"      . #Xe16e)
     ("*"      . #Xe16f)))
 
-(defun +pretty-code-setup-fira-ligatures-h ()
-  (set-fontset-font t '(#Xe15a . #Xe15a) +pretty-code-material-font-name)
-  (setq-default prettify-symbols-alist
-                (append prettify-symbols-alist
-                        (mapcar #'+pretty-code--correct-symbol-bounds
-                                +pretty-code-fira-code-font-ligatures))))
+;; (defun +pretty-code-setup-fira-ligatures-h ()
+;;   (set-fontset-font t '(#Xe15a . #Xe15a) +pretty-code-material-font-name)
+;;   (setq-default prettify-symbols-alist
+;;                 (append prettify-symbols-alist
+;;                         (mapcar #'+pretty-code--correct-symbol-bounds
+;;                                 +pretty-code-fira-code-font-ligatures))))
 
-(add-hook 'doom-init-ui-hook #'+pretty-code-setup-fira-ligatures-h)
+;; (add-hook 'doom-init-ui-hook #'+pretty-code-setup-fira-ligatures-h)

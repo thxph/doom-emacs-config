@@ -14,7 +14,7 @@
 (setq display-line-numbers-type t)
 (setq-default line-spacing .37)
 
-(add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
+;(add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
 (setq doom-theme 'doom-one)
 (doom-themes-visual-bell-config)
@@ -26,10 +26,10 @@
 (setq doom-modeline-major-mode-color-icon t)
 (setq doom-modeline-indent-info t)
 
-(setq-default nyan-animate-nyancat t
-              nyan-wavy-trail t
-              nyan-bar-length 20)
-(nyan-mode t)
+;; (setq-default nyan-animate-nyancat t
+;;               nyan-wavy-trail t
+;;               nyan-bar-length 20)
+;; (nyan-mode t)
 
 ;; Adapted from http://www.modernemacs.com/post/pretty-magit/
 

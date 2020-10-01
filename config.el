@@ -9,6 +9,7 @@
 (load! "thxph-magit")
 (load! "thxph-keymaps")
 (load! "thxph-hydras")
+(load! "thxph-ac")
 ;(load! "font-lock+")
 
 (after! magit
